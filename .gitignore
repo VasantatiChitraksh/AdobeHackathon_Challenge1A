@@ -90,3 +90,5 @@ Thumbs.db
 # dotenv files
 *.env
 .env.*
+
+verify/
