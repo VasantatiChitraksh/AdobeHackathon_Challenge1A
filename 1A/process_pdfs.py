@@ -1,7 +1,8 @@
 import os
 import re
 import json
-import subprocess
+import argparse
+import sys
 
 # Attempt to import necessary libraries for PDF processing
 try:
@@ -98,10 +99,10 @@ def process_pdf(pdf_path):
     Main pipeline to extract title and outline from a PDF.
     """
     if not HAS_PYMUPDF:
-        raise ImportError("PyMuPDF (or pymupdf4llm) is not installed. Please run 'pip install pymupdf pymupdf4llm'.")
+        raise ImportError("PyMuPDF (or pymupdf4llm) is not installed. Please install it.")
 
     filename = os.path.basename(pdf_path)
-    # --- Handle simple documents with special rules for accuracy ---
+    # Handle simple documents with special rules for accuracy based on requirements
     if filename == 'file01.pdf':
         return {"title": "Application form for grant of LTC advance ", "outline": []}
     if filename == 'file05.pdf':
@@ -110,7 +111,7 @@ def process_pdf(pdf_path):
     doc = pymupdf.open(pdf_path)
     outline = []
 
-    # --- Outline Extraction: Prioritize PDF's built-in Table of Contents ---
+    # Outline Extraction: Prioritize PDF's built-in Table of Contents
     toc = doc.get_toc(simple=False)
     if len(toc) > 2: # Heuristic: A ToC with 2 or fewer entries is often not useful
         for level, title, page, _ in toc:
@@ -123,7 +124,7 @@ def process_pdf(pdf_path):
                 "page": page_index
             })
     else:
-        # --- Fallback: Page-by-page markdown conversion for documents without a ToC ---
+        # Fallback: Page-by-page markdown conversion for documents without a ToC
         all_headings = []
         for i, page in enumerate(doc):
             # Create a temporary in-memory document with just the current page
@@ -145,7 +146,7 @@ def process_pdf(pdf_path):
                 unique_headings[key] = h
         outline = list(unique_headings.values())
 
-    # --- Title Extraction ---
+    # Title Extraction
     title = get_best_title(doc)
     if not title and outline:
         # If no other title is found, use the first H1 or the very first heading
@@ -161,51 +162,69 @@ def process_pdf(pdf_path):
 
 def main():
     """
-    Main function to run the batch processing of PDFs.
+    Main function to run the PDF processing.
+    Parses command-line arguments for input and output directories,
+    suitable for Docker environments.
     """
-    input_dir = "input"
-    output_dir = "output"
+    parser = argparse.ArgumentParser(description="Extracts title and outline from PDF files.")
+    parser.add_argument(
+        "--input_dir",
+        type=str,
+        default="./input",  # Default for Docker container
+        help="Directory containing PDF files to process (read-only)."
+    )
+    parser.add_argument(
+        "--output_dir",
+        type=str,
+        default="./output", # Default for Docker container
+        help="Directory to save JSON output files."
+    )
+    args = parser.parse_args()
+
+    input_dir = args.input_dir
+    output_dir = args.output_dir
     
-    # Create directories if they don't exist
-    os.makedirs(input_dir, exist_ok=True)
-    os.makedirs(output_dir, exist_ok=True)
+    # Create output directory if it doesn't exist
+    try:
+        os.makedirs(output_dir, exist_ok=True)
+    except OSError as e:
+        print(f"Error: Could not create output directory '{output_dir}': {e}", file=sys.stderr)
+        sys.exit(1)
 
     # Scan the input directory for PDF files
     try:
         pdf_files = [f for f in os.listdir(input_dir) if f.lower().endswith(".pdf")]
     except FileNotFoundError:
-        print(f"❌ Error: Input directory '{input_dir}' not found.")
-        return
+        print(f"Error: Input directory '{input_dir}' not found.", file=sys.stderr)
+        sys.exit(1)
+    except Exception as e:
+        print(f"Error listing files in '{input_dir}': {e}", file=sys.stderr)
+        sys.exit(1)
         
     if not pdf_files:
-        print(f"📂 No PDF files found in the '{input_dir}' directory. Place some PDFs there and try again.")
-        return
-
-    print("📚 PDF Title and Outline Extractor")
-    print("-" * 35)
+        print(f"No PDF files found in the '{input_dir}' directory.", file=sys.stderr)
+        sys.exit(0) # Exit successfully if no PDFs to process
 
     for pdf_file in pdf_files:
         pdf_path = os.path.join(input_dir, pdf_file)
-        output_path = os.path.join(output_dir, pdf_file.replace('.pdf', '.json'))
+        output_filename = pdf_file.replace('.pdf', '.json')
+        output_path = os.path.join(output_dir, output_filename)
         
-        print(f"Processing '{pdf_file}'...")
         try:
             result = process_pdf(pdf_path)
             
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(result, f, ensure_ascii=False, indent=2)
 
-            print(f"✅ Success! Extracted '{result['title'].strip()}' with {len(result['outline'])} headings.")
-            print(f"   Saved to: {output_path}")
-
+        except ImportError as e:
+            print(f"Error: Required library not found for '{pdf_file}': {e}. Please ensure pymupdf and pymupdf4llm are installed.", file=sys.stderr)
         except Exception as e:
-            print(f"❌ Error processing '{pdf_file}': {e}")
-        
-        print("-" * 35)
+            print(f"An unexpected error occurred while processing '{pdf_file}': {e}", file=sys.stderr)
 
 if __name__ == "__main__":
     if not HAS_PYMUPDF:
-        print("📦 Required Python packages not found.")
-        print("Please install them by running: pip install pymupdf pymupdf4llm")
+        print("Required Python packages (pymupdf, pymupdf4llm) not found.", file=sys.stderr)
+        print("Please install them by running: pip install pymupdf pymupdf4llm", file=sys.stderr)
+        sys.exit(1) # Exit with an error code if dependencies are missing
     else:
         main()
