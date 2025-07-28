@@ -1,0 +1,250 @@
+{
+  "title": "CS209L: Computer Organization ",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Instruction Set Architecture (ISA) ",
+      "page": 1
+    },
+    {
+      "level": "H1",
+      "text": "Instruction Set Architecture (ISA) ",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 3
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 4
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 5
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 7
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "RISC-V ",
+      "page": 9
+    },
+    {
+      "level": "H1",
+      "text": "Immediate Values ",
+      "page": 10
+    },
+    {
+      "level": "H1",
+      "text": "Immediate Values ",
+      "page": 11
+    },
+    {
+      "level": "H1",
+      "text": "Immediate Values ",
+      "page": 12
+    },
+    {
+      "level": "H1",
+      "text": "Variable assignment ",
+      "page": 13
+    },
+    {
+      "level": "H1",
+      "text": "Variable assignment ",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "Pseudo Instructions ",
+      "page": 15
+    },
+    {
+      "level": "H1",
+      "text": "Pseudo Instructions ",
+      "page": 16
+    },
+    {
+      "level": "H1",
+      "text": "Instruction Types ",
+      "page": 17
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 18
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 19
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 20
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 21
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 22
+    },
+    {
+      "level": "H1",
+      "text": "Arithmetic and Logical ",
+      "page": 23
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 24
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 25
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 26
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 27
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 28
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 29
+    },
+    {
+      "level": "H1",
+      "text": "Memory Instructions ",
+      "page": 30
+    },
+    {
+      "level": "H1",
+      "text": "Control Instructions ",
+      "page": 31
+    },
+    {
+      "level": "H1",
+      "text": "Control Instructions ",
+      "page": 32
+    },
+    {
+      "level": "H1",
+      "text": "Unconditional Jumps ",
+      "page": 33
+    },
+    {
+      "level": "H1",
+      "text": "Unconditional Jumps ",
+      "page": 34
+    },
+    {
+      "level": "H1",
+      "text": "Branches ",
+      "page": 35
+    },
+    {
+      "level": "H1",
+      "text": "Branches ",
+      "page": 36
+    },
+    {
+      "level": "H1",
+      "text": "Why link? ",
+      "page": 37
+    },
+    {
+      "level": "H1",
+      "text": "Miscellaneous Instructions ",
+      "page": 38
+    },
+    {
+      "level": "H1",
+      "text": "Extensions ",
+      "page": 39
+    },
+    {
+      "level": "H1",
+      "text": "Memory Management ",
+      "page": 40
+    },
+    {
+      "level": "H1",
+      "text": "Address Space ",
+      "page": 41
+    },
+    {
+      "level": "H1",
+      "text": "Stack ",
+      "page": 42
+    },
+    {
+      "level": "H1",
+      "text": "Stack ",
+      "page": 43
+    },
+    {
+      "level": "H1",
+      "text": "Stack ",
+      "page": 44
+    },
+    {
+      "level": "H1",
+      "text": "Stack ",
+      "page": 45
+    },
+    {
+      "level": "H1",
+      "text": "Heap ",
+      "page": 46
+    },
+    {
+      "level": "H1",
+      "text": "Valgrind ",
+      "page": 47
+    },
+    {
+      "level": "H1",
+      "text": "Valgrind ",
+      "page": 48
+    },
+    {
+      "level": "H1",
+      "text": "Little Endian and Big Endian ",
+      "page": 49
+    }
+  ]
+}
