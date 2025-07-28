@@ -1,0 +1,1195 @@
+{
+  "title": "IBM Communications Server for Data Center Deployment on AIX: IBM Communications Server for Data Center Deployment on AIX 入門 ",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "目次 ",
+      "page": 2
+    },
+    {
+      "level": "H1",
+      "text": "表 ",
+      "page": 6
+    },
+    {
+      "level": "H1",
+      "text": "図 ",
+      "page": 8
+    },
+    {
+      "level": "H1",
+      "text": "IBM Communications Server for Data Center Deployment on AIX へようこそ ",
+      "page": 10
+    },
+    {
+      "level": "H2",
+      "text": "本書の使用法 ",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "参照リスト ",
+      "page": 10
+    },
+    {
+      "level": "H3",
+      "text": "表記上の規則 ",
+      "page": 11
+    },
+    {
+      "level": "H3",
+      "text": "本書で使用される省略名 ",
+      "page": 11
+    },
+    {
+      "level": "H2",
+      "text": "本リリースでの新機能 ",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "新しい機能 ",
+      "page": 13
+    },
+    {
+      "level": "H3",
+      "text": "廃止された機能 ",
+      "page": 14
+    },
+    {
+      "level": "H2",
+      "text": "本書の追加情報の入手先 ",
+      "page": 14
+    },
+    {
+      "level": "H1",
+      "text": "第 1 章 IBM Communications Server for Data Center Deployment on AIX について ",
+      "page": 16
+    },
+    {
+      "level": "H2",
+      "text": "IBM Communications Server for Data Center Deployment on AIX の機能およびパッケージ ",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "IBM Communications Server for Data Center Deployment on AIX ",
+      "page": 16
+    },
+    {
+      "level": "H3",
+      "text": "拡張ネットワーキング機能 ",
+      "page": 20
+    },
+    {
+      "level": "H4",
+      "text": "SNA ゲートウェイ ",
+      "page": 21
+    },
+    {
+      "level": "H4",
+      "text": "プライマリー LU サポート ",
+      "page": 21
+    },
+    {
+      "level": "H4",
+      "text": "分岐エクステンダー ",
+      "page": 21
+    },
+    {
+      "level": "H4",
+      "text": "APPC Application Suite ",
+      "page": 23
+    },
+    {
+      "level": "H4",
+      "text": "Enterprise Extender ",
+      "page": 23
+    },
+    {
+      "level": "H4",
+      "text": "TN サーバー ",
+      "page": 23
+    },
+    {
+      "level": "H5",
+      "text": "セキュリティー機能 ",
+      "page": 24
+    },
+    {
+      "level": "H5",
+      "text": "サービス・ロケーション・プロトコル (SLP) ",
+      "page": 24
+    },
+    {
+      "level": "H4",
+      "text": "TN Redirector ",
+      "page": 25
+    },
+    {
+      "level": "H2",
+      "text": "機能および利点 ",
+      "page": 25
+    },
+    {
+      "level": "H3",
+      "text": "多用途のビルディング・ブロック ",
+      "page": 25
+    },
+    {
+      "level": "H3",
+      "text": "クライアント/サーバー操作 ",
+      "page": 26
+    },
+    {
+      "level": "H3",
+      "text": "容易な構成 ",
+      "page": 26
+    },
+    {
+      "level": "H3",
+      "text": "管理用の追加のユーザー・インターフェース選択 ",
+      "page": 27
+    },
+    {
+      "level": "H3",
+      "text": "パフォーマンスの改善 ",
+      "page": 27
+    },
+    {
+      "level": "H3",
+      "text": "セキュリティー・オプション ",
+      "page": 27
+    },
+    {
+      "level": "H3",
+      "text": "ネットワーク管理の柔軟性 ",
+      "page": 28
+    },
+    {
+      "level": "H3",
+      "text": "信頼性、可用性、および保守容易性 ",
+      "page": 28
+    },
+    {
+      "level": "H3",
+      "text": "ネットワークの統合、拡張および変更 ",
+      "page": 29
+    },
+    {
+      "level": "H1",
+      "text": "第 2 章 ネットワークおよび IBM Communications Server for Data Center Deployment on AIX の計画 ",
+      "page": 30
+    },
+    {
+      "level": "H2",
+      "text": "ネットワーク計画の段階 ",
+      "page": 30
+    },
+    {
+      "level": "H3",
+      "text": "ネットワークの機能要件の確認 ",
+      "page": 30
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX の構成方法の決定 ",
+      "page": 31
+    },
+    {
+      "level": "H3",
+      "text": "インストールおよび操作のリソース要件の確認 ",
+      "page": 31
+    },
+    {
+      "level": "H4",
+      "text": "要員の要件 ",
+      "page": 31
+    },
+    {
+      "level": "H4",
+      "text": "IBM Power モデル ",
+      "page": 32
+    },
+    {
+      "level": "H4",
+      "text": "トランスポート・メディア ",
+      "page": 32
+    },
+    {
+      "level": "H4",
+      "text": "インストール要件 ",
+      "page": 32
+    },
+    {
+      "level": "H4",
+      "text": "拡張構成 ",
+      "page": 34
+    },
+    {
+      "level": "H4",
+      "text": "操作に必要なメモリーおよびストレージ容量 ",
+      "page": 34
+    },
+    {
+      "level": "H4",
+      "text": "応答時間 ",
+      "page": 35
+    },
+    {
+      "level": "H2",
+      "text": "IPv4 アドレッシングと IPv6 アドレッシング ",
+      "page": 35
+    },
+    {
+      "level": "H2",
+      "text": "クロスプラットフォーム構成における互換性の保証 ",
+      "page": 37
+    },
+    {
+      "level": "H2",
+      "text": "命名規則 ",
+      "page": 37
+    },
+    {
+      "level": "H1",
+      "text": "第 3 章 Installing CS/AIX on AIX servers ",
+      "page": 38
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX のライセンス許可とパッケージ化 ",
+      "page": 38
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX ライセンス許可の仕組み ",
+      "page": 38
+    },
+    {
+      "level": "H4",
+      "text": "ノードロックライセンスを使用して CS/AIX を有効にする ",
+      "page": 38
+    },
+    {
+      "level": "H4",
+      "text": "CS/AIX リソースの使用量のモニター ",
+      "page": 39
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX ライセンス・プログラムのパッケージ方法 ",
+      "page": 39
+    },
+    {
+      "level": "H4",
+      "text": "CS/AIX に組み込まれている機能 ",
+      "page": 40
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX インストールの準備 ",
+      "page": 41
+    },
+    {
+      "level": "H3",
+      "text": "データ・リンク制御ファイル・セットのインストール ",
+      "page": 41
+    },
+    {
+      "level": "H3",
+      "text": "製品インストールの詳細の表示 ",
+      "page": 41
+    },
+    {
+      "level": "H3",
+      "text": "言語環境変数の変更 ",
+      "page": 41
+    },
+    {
+      "level": "H2",
+      "text": "旧レベルの CS/AIX からのマイグレーション ",
+      "page": 42
+    },
+    {
+      "level": "H3",
+      "text": "考慮事項 ",
+      "page": 42
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX ライセンス・プログラムのインストール ",
+      "page": 42
+    },
+    {
+      "level": "H3",
+      "text": "インストール方法 ",
+      "page": 43
+    },
+    {
+      "level": "H4",
+      "text": "簡易インストールを使用した CS/AIX のインストール ",
+      "page": 43
+    },
+    {
+      "level": "H5",
+      "text": "SMIT を使用した簡易インストール ",
+      "page": 43
+    },
+    {
+      "level": "H5",
+      "text": "共通デスクトップ環境 (CDE) を使用した簡易インストール ",
+      "page": 44
+    },
+    {
+      "level": "H4",
+      "text": "ローカル・ノードでの手動インストール ",
+      "page": 44
+    },
+    {
+      "level": "H5",
+      "text": "SMIT を使用した手動インストール ",
+      "page": 44
+    },
+    {
+      "level": "H5",
+      "text": "共通デスクトップ環境 (CDE) を使用した手動インストール ",
+      "page": 45
+    },
+    {
+      "level": "H4",
+      "text": "ネットワーク・インストール管理 (NIM) を使用したネットワーク経由のインストール ",
+      "page": 45
+    },
+    {
+      "level": "H2",
+      "text": "WebSphere Application Server の構成 ",
+      "page": 46
+    },
+    {
+      "level": "H3",
+      "text": "WebSphere Application Server のセキュア証明書のセットアップ ",
+      "page": 46
+    },
+    {
+      "level": "H3",
+      "text": "WebSphere アプリケーション・サーバーの構成 ",
+      "page": 46
+    },
+    {
+      "level": "H3",
+      "text": "サーバー構成ファイルのインストール ",
+      "page": 47
+    },
+    {
+      "level": "H2",
+      "text": "インストール後の作業 ",
+      "page": 47
+    },
+    {
+      "level": "H3",
+      "text": "クライアント/サーバー操作 ",
+      "page": 47
+    },
+    {
+      "level": "H3",
+      "text": "PDF ブックの表示 ",
+      "page": 47
+    },
+    {
+      "level": "H3",
+      "text": "Reviewing current release information ",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "TN サーバーまたは TN リダイレクターで使用するための SSL の構成 ",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "Web 管理プログラムのための Web サーバーの構成 ",
+      "page": 48
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX 構成ファイルのバックアップ ",
+      "page": 49
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX 構成ファイルのバックアップ・コピーの復元 ",
+      "page": 49
+    },
+    {
+      "level": "H3",
+      "text": "構成ファイルの再初期化 ",
+      "page": 50
+    },
+    {
+      "level": "H1",
+      "text": "第 4 章 Linux での IBM Remote API Client のインストール ",
+      "page": 52
+    },
+    {
+      "level": "H2",
+      "text": "ハードウェアおよびソフトウェア要件 ",
+      "page": 52
+    },
+    {
+      "level": "H3",
+      "text": "ハードウェア要件 ",
+      "page": 52
+    },
+    {
+      "level": "H3",
+      "text": "Linux オペレーティング・システムのバージョン ",
+      "page": 52
+    },
+    {
+      "level": "H3",
+      "text": "Java ",
+      "page": 53
+    },
+    {
+      "level": "H3",
+      "text": "GSKIT ",
+      "page": 53
+    },
+    {
+      "level": "H3",
+      "text": "製品インストール詳細の表示 ",
+      "page": 53
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX が使用する環境変数の設定 ",
+      "page": 53
+    },
+    {
+      "level": "H3",
+      "text": "言語環境変数の設定 ",
+      "page": 53
+    },
+    {
+      "level": "H2",
+      "text": "Linux へのリモート API クライアントのインストール ",
+      "page": 54
+    },
+    {
+      "level": "H2",
+      "text": "GSKIT を使用した HTTPS セキュリティー証明書のセットアップ ",
+      "page": 55
+    },
+    {
+      "level": "H2",
+      "text": "Linux での Remote API Client のアンインストール ",
+      "page": 56
+    },
+    {
+      "level": "H1",
+      "text": "第 5 章 IBM Remote API Clients on Linux for System z のインストール ",
+      "page": 58
+    },
+    {
+      "level": "H2",
+      "text": "ハードウェアおよびソフトウェア要件 ",
+      "page": 58
+    },
+    {
+      "level": "H3",
+      "text": "ハードウェア要件 ",
+      "page": 58
+    },
+    {
+      "level": "H3",
+      "text": "Linux オペレーティング・システムのバージョン ",
+      "page": 58
+    },
+    {
+      "level": "H3",
+      "text": "Java ",
+      "page": 58
+    },
+    {
+      "level": "H3",
+      "text": "GSKIT ",
+      "page": 58
+    },
+    {
+      "level": "H3",
+      "text": "製品インストール詳細の表示 ",
+      "page": 59
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX が使用する環境変数の設定 ",
+      "page": 59
+    },
+    {
+      "level": "H3",
+      "text": "言語環境変数の設定 ",
+      "page": 59
+    },
+    {
+      "level": "H2",
+      "text": "Installing the Remote API Client on Linux for System z ",
+      "page": 60
+    },
+    {
+      "level": "H2",
+      "text": "GSKIT を使用した HTTPS セキュリティー証明書のセットアップ ",
+      "page": 61
+    },
+    {
+      "level": "H2",
+      "text": "Remote API Client on Linux for System z のアンインストール ",
+      "page": 62
+    },
+    {
+      "level": "H1",
+      "text": "第 6 章 AIX システムでの IBM Remote API Client のインストール ",
+      "page": 64
+    },
+    {
+      "level": "H2",
+      "text": "ハードウェアおよびソフトウェア要件 ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "ハードウェア要件 ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "オペレーティング・システムのバージョン ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "Java ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "GSKIT ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX が使用する環境変数の設定 ",
+      "page": 64
+    },
+    {
+      "level": "H3",
+      "text": "言語環境変数の変更 ",
+      "page": 65
+    },
+    {
+      "level": "H2",
+      "text": "AIX での Remote API Client のインストール ",
+      "page": 65
+    },
+    {
+      "level": "H3",
+      "text": "Installing the Remote API Client by copying files to your AIX workstation ",
+      "page": 65
+    },
+    {
+      "level": "H3",
+      "text": "CD からのリモート API クライアントのインストール ",
+      "page": 66
+    },
+    {
+      "level": "H2",
+      "text": "GSKIT を使用した HTTPS セキュリティー証明書のセットアップ ",
+      "page": 66
+    },
+    {
+      "level": "H2",
+      "text": "AIX での Remote API Client のアンインストール ",
+      "page": 67
+    },
+    {
+      "level": "H1",
+      "text": "第 7 章 Remote API Client on Windows の計画とインストール ",
+      "page": 68
+    },
+    {
+      "level": "H2",
+      "text": "ハードウェアおよびソフトウェア要件 ",
+      "page": 68
+    },
+    {
+      "level": "H2",
+      "text": "セットアップ・プログラムへのアクセス ",
+      "page": 69
+    },
+    {
+      "level": "H2",
+      "text": "セットアップ・プログラムを使用した Windows へのリモート API クライアントのインストール ",
+      "page": 69
+    },
+    {
+      "level": "H2",
+      "text": "Remote API Client 構成用の拡張オプション ",
+      "page": 72
+    },
+    {
+      "level": "H2",
+      "text": "コマンド行からのリモート API クライアント・ソフトウェアのインストール ",
+      "page": 72
+    },
+    {
+      "level": "H2",
+      "text": "GSKIT を使用した HTTPS セキュリティー証明書のセットアップ ",
+      "page": 75
+    },
+    {
+      "level": "H2",
+      "text": "インストール後の Remote API Client ソフトウェアのカスタマイズ ",
+      "page": 76
+    },
+    {
+      "level": "H2",
+      "text": "リモート API クライアント・ソフトウェアの再インストール ",
+      "page": 76
+    },
+    {
+      "level": "H2",
+      "text": "Remote API Client ソフトウェアのアンインストール ",
+      "page": 77
+    },
+    {
+      "level": "H2",
+      "text": "コマンド行からのリモート API クライアント・ソフトウェアのアンインストール ",
+      "page": 77
+    },
+    {
+      "level": "H2",
+      "text": "ヘルプ ",
+      "page": 77
+    },
+    {
+      "level": "H1",
+      "text": "第 8 章 CS/AIX の構成および使用 ",
+      "page": 78
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX 構成の計画 ",
+      "page": 78
+    },
+    {
+      "level": "H3",
+      "text": "計画ワークシート ",
+      "page": 79
+    },
+    {
+      "level": "H3",
+      "text": "作業シート ",
+      "page": 79
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX が使用する環境変数の設定 ",
+      "page": 79
+    },
+    {
+      "level": "H2",
+      "text": "Motif 管理プログラムの使用 ",
+      "page": 80
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX プログラムへのパスの指定 ",
+      "page": 80
+    },
+    {
+      "level": "H3",
+      "text": "CS/AIX の使用 ",
+      "page": 80
+    },
+    {
+      "level": "H3",
+      "text": "Motif 管理プログラムを使用した CS/AIX の管理 ",
+      "page": 81
+    },
+    {
+      "level": "H4",
+      "text": "ノード・ウィンドウ ",
+      "page": 81
+    },
+    {
+      "level": "H4",
+      "text": "リソース項目 ",
+      "page": 84
+    },
+    {
+      "level": "H4",
+      "text": "ツールバー・ボタン ",
+      "page": 84
+    },
+    {
+      "level": "H2",
+      "text": "Configuring Client/Server functions ",
+      "page": 85
+    },
+    {
+      "level": "H2",
+      "text": "Configuring the node ",
+      "page": 85
+    },
+    {
+      "level": "H2",
+      "text": "接続の構成 ",
+      "page": 87
+    },
+    {
+      "level": "H3",
+      "text": "従属トラフィック用の SDLC リンクの構成 ",
+      "page": 87
+    },
+    {
+      "level": "H3",
+      "text": "従属および独立したトラフィックをサポートするためのイーサネット・リンクの構成 ",
+      "page": 88
+    },
+    {
+      "level": "H3",
+      "text": "Enterprise Extender リンクの構成 ",
+      "page": 89
+    },
+    {
+      "level": "H2",
+      "text": "タイプ 0 から 3 LU の構成 ",
+      "page": 90
+    },
+    {
+      "level": "H3",
+      "text": "タイプ 0から3 の LU の定義 ",
+      "page": 90
+    },
+    {
+      "level": "H3",
+      "text": "LU プールの定義 ",
+      "page": 91
+    },
+    {
+      "level": "H2",
+      "text": "APPC 通信の構成 ",
+      "page": 91
+    },
+    {
+      "level": "H3",
+      "text": "単純な APPN ネットワークの構成 ",
+      "page": 92
+    },
+    {
+      "level": "H4",
+      "text": "ネットワーク・ノードの構成 ",
+      "page": 92
+    },
+    {
+      "level": "H4",
+      "text": "エンド・ノードの構成 ",
+      "page": 93
+    },
+    {
+      "level": "H4",
+      "text": "つのノード間の接続の確認 ",
+      "page": 93
+    },
+    {
+      "level": "H4",
+      "text": "独立 APPC LU の構成 ",
+      "page": 93
+    },
+    {
+      "level": "H4",
+      "text": "LEN ノードのパートナー LU の構成 ",
+      "page": 94
+    },
+    {
+      "level": "H5",
+      "text": "リモート・ノードの定義 ",
+      "page": 95
+    },
+    {
+      "level": "H5",
+      "text": "パートナー LU 別名の定義 ",
+      "page": 95
+    },
+    {
+      "level": "H5",
+      "text": "リモート・ノードでのパートナー LU の定義 ",
+      "page": 95
+    },
+    {
+      "level": "H5",
+      "text": "ワイルドカードを使用した複数のパートナー LU の定義 ",
+      "page": 96
+    },
+    {
+      "level": "H3",
+      "text": "従属 APPC の構成 ",
+      "page": 96
+    },
+    {
+      "level": "H2",
+      "text": "CPI 通信のための構成 ",
+      "page": 97
+    },
+    {
+      "level": "H2",
+      "text": "LUA の構成 ",
+      "page": 97
+    },
+    {
+      "level": "H2",
+      "text": "SNA ゲートウェイの構成 ",
+      "page": 98
+    },
+    {
+      "level": "H3",
+      "text": "暗黙のダウンストリーム LU のサポート ",
+      "page": 99
+    },
+    {
+      "level": "H3",
+      "text": "ダウンストリーム LU の ",
+      "page": 99
+    },
+    {
+      "level": "H2",
+      "text": "DLUR の構成 ",
+      "page": 100
+    },
+    {
+      "level": "H3",
+      "text": "ローカル・ノードでの DLUR サポートの構成 ",
+      "page": 101
+    },
+    {
+      "level": "H3",
+      "text": "ダウンストリーム・ノードをサポートするパススルー DLUR の構成 ",
+      "page": 102
+    },
+    {
+      "level": "H2",
+      "text": "TN サーバーの構成 ",
+      "page": 102
+    },
+    {
+      "level": "H3",
+      "text": "LU の定義 ",
+      "page": 104
+    },
+    {
+      "level": "H3",
+      "text": "LU プールの定義 ",
+      "page": 105
+    },
+    {
+      "level": "H3",
+      "text": "TN3270 サーバーの構成 ",
+      "page": 105
+    },
+    {
+      "level": "H2",
+      "text": "TN リダイレクターの構成 ",
+      "page": 107
+    },
+    {
+      "level": "H3",
+      "text": "TN リディレクターの構成 ",
+      "page": 107
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX を使用不可にする ",
+      "page": 108
+    },
+    {
+      "level": "H1",
+      "text": "第 9 章 CS/AIX と SNA の情報リソース ",
+      "page": 110
+    },
+    {
+      "level": "H2",
+      "text": "SNA ライブラリー ",
+      "page": 110
+    },
+    {
+      "level": "H2",
+      "text": "ネットワークで入手可能な情報 ",
+      "page": 110
+    },
+    {
+      "level": "H2",
+      "text": "推薦資料 ",
+      "page": 111
+    },
+    {
+      "level": "H1",
+      "text": "付録 A IBM へのご意見の送付方法 ",
+      "page": 112
+    },
+    {
+      "level": "H2",
+      "text": "E メール・フィードバック・テンプレート ",
+      "page": 112
+    },
+    {
+      "level": "H2",
+      "text": "技術的な問題がある場合 ",
+      "page": 112
+    },
+    {
+      "level": "H1",
+      "text": "付録 B 特記事項 ",
+      "page": 114
+    },
+    {
+      "level": "H2",
+      "text": "商標 ",
+      "page": 115
+    },
+    {
+      "level": "H1",
+      "text": "参考文献 ",
+      "page": 118
+    },
+    {
+      "level": "H2",
+      "text": "CS/AIX 関連資料 ",
+      "page": 118
+    },
+    {
+      "level": "H2",
+      "text": "IBM Redbooks ",
+      "page": 119
+    },
+    {
+      "level": "H2",
+      "text": "AIX オペレーティング・システム関連資料 ",
+      "page": 119
+    },
+    {
+      "level": "H2",
+      "text": "システム・ネットワーク体系 (SNA) 関連資料 ",
+      "page": 119
+    },
+    {
+      "level": "H2",
+      "text": "ホスト構成関連資料 ",
+      "page": 120
+    },
+    {
+      "level": "H2",
+      "text": "z/OS Communications Server 関連資料 ",
+      "page": 120
+    },
+    {
+      "level": "H2",
+      "text": "TCP/IP 関連資料 ",
+      "page": 120
+    },
+    {
+      "level": "H2",
+      "text": "X.25 関連資料 ",
+      "page": 120
+    },
+    {
+      "level": "H2",
+      "text": "APPC 関連資料 ",
+      "page": 120
+    },
+    {
+      "level": "H2",
+      "text": "プログラミング関連資料 ",
+      "page": 121
+    },
+    {
+      "level": "H2",
+      "text": "その他の IBM ネットワーキング関連資料 ",
+      "page": 121
+    },
+    {
+      "level": "H1",
+      "text": "索引 ",
+      "page": 122
+    },
+    {
+      "level": "H2",
+      "text": "［ア行］ ",
+      "page": 122
+    },
+    {
+      "level": "H2",
+      "text": "［カ行］ ",
+      "page": 122
+    },
+    {
+      "level": "H2",
+      "text": "［サ行］ ",
+      "page": 123
+    },
+    {
+      "level": "H2",
+      "text": "［タ行］ ",
+      "page": 123
+    },
+    {
+      "level": "H2",
+      "text": "［ナ行］ ",
+      "page": 123
+    },
+    {
+      "level": "H2",
+      "text": "［ハ行］ ",
+      "page": 123
+    },
+    {
+      "level": "H2",
+      "text": "［マ行］ ",
+      "page": 124
+    },
+    {
+      "level": "H2",
+      "text": "［ヤ行］ ",
+      "page": 124
+    },
+    {
+      "level": "H2",
+      "text": "［ラ行］ ",
+      "page": 124
+    },
+    {
+      "level": "H2",
+      "text": "［ワ行］ ",
+      "page": 124
+    },
+    {
+      "level": "H2",
+      "text": "［数字］ ",
+      "page": 124
+    },
+    {
+      "level": "H2",
+      "text": "A ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "B ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "C ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "D ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "E ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "G ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "H ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "I ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "J ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "L ",
+      "page": 125
+    },
+    {
+      "level": "H2",
+      "text": "M ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "N ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "O ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "P ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "Q ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "R ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "S ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "T ",
+      "page": 126
+    },
+    {
+      "level": "H2",
+      "text": "U ",
+      "page": 127
+    },
+    {
+      "level": "H2",
+      "text": "V ",
+      "page": 127
+    },
+    {
+      "level": "H2",
+      "text": "W ",
+      "page": 127
+    },
+    {
+      "level": "H2",
+      "text": "X ",
+      "page": 127
+    },
+    {
+      "level": "H2",
+      "text": "［特殊文字］ ",
+      "page": 127
+    }
+  ]
+}
