@@ -84,11 +84,10 @@ After successfully building the image, run the solution using the following comm
   * For maximum robustness, consider using **absolute paths** (e.g., `C:\Users\YourUser\Documents\your_solution_folder\input`):
 
     ```bash
-    # Generic command (adjust $(pwd) for PowerShell if needed)
+    # Generic command (adjust $(pwd) for PowerShell({PWD}) if needed)
     docker run --rm -v $(pwd)/input:/app/input -v $(pwd)/output:/app/output --network none mysolutionname:somerandomidentifier
 
-    # Example for Windows PowerShell/CMD (using absolute paths for clarity)
-    # Make sure to replace `C:\Path\To\Your\Solution\Folder` with your actual project path
+    General Local Path
     docker run --rm -v C:\Path\To\Your\Solution\Folder\input:/app/input -v C:\Path\To\Your\Solution\Folder\output\:/app/output --network none mysolutionname:somerandomidentifier
     ```
 
